@@ -1,47 +1,12 @@
 import React from 'react'
 
+import SubHeader from '../Header/SubHeader';
 function About() {
   return (
     <div>
-        <section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="top-bar">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-12">
-                                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="#"/></a>
-                            </div>
-                            <div class="col-md-9 d-flex align-items-end">
-                                <ul class="ml-auto">
-                                    <li>
-                                        <img src="images/mail-icon.png" alt="#"/>
-                                        <div>
-                                            <span>Mail us</span>
-                                            <h4>info@medenin</h4>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="images/call-icon.png" alt="#"/>
-                                        <div>
-                                            <span>Toll Free</span>
-                                            <h4>+123 456 7890</h4>
-                                        </div>
-                                    </li>
-                                    <li class="appointment-btn">
-                                        <a href="appointment.html" class="btn btn-primary">Make Appointment</a>
-                                        <i class="fas fa-search"></i>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <SubHeader></SubHeader>
 
-    <div class="light nav-big">
+    {/* <div class="light nav-big">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -54,13 +19,13 @@ function About() {
                             <ul class="navbar-nav mr-auto nav-sub">
                                 <li class="nav-item ">
                                     <a class="nav-link " href="/"  role="button"  aria-haspopup="true" aria-expanded="false">
-                                        Home <i class="fas fa-plus"></i>
+                                        Home <AddIcon sx={{fontSize:'small'}}></AddIcon>
                                     </a>
                                     
                                 </li>
                                 <li class="nav-item ">
                                     <a class="nav-link " href="#"  role="button"  aria-haspopup="true" aria-expanded="false">
-                                        Department <i class="fas fa-plus"></i>
+                                        Department <AddIcon sx={{fontSize:'small'}}></AddIcon>
                                     </a>
                                     
                                 </li>
@@ -68,7 +33,7 @@ function About() {
                                         <li class="nav-item ">
                                             <a class="nav-link " href="#" 
                                                 aria-haspopup="true" aria-expanded="false">
-                                                Patients <i class="fas fa-plus"></i>
+                                                Patients <AddIcon sx={{fontSize:'small'}}></AddIcon>
                                             </a>
                                             
                                         </li>
@@ -76,12 +41,12 @@ function About() {
                                         <li class="nav-item ">
                                             <a class="nav-link" href="/about" 
                                                 role="button" aria-haspopup="true"
-                                                aria-expanded="false"> About <i class="fas fa-plus"></i> </a>
+                                                aria-expanded="false"> About <AddIcon sx={{fontSize:'small'}}></AddIcon> </a>
                                             
                                         </li>
                                 <li class="nav-item ">
                                     <a class="nav-link " href="#"  role="button"  aria-haspopup="true" aria-expanded="false">
-                                        Contact Us <i class="fas fa-plus"></i>
+                                        Contact Us <AddIcon sx={{fontSize:'small'}}></AddIcon>
                                     </a>
                                     
                                 </li>
@@ -112,7 +77,7 @@ function About() {
                 </div>
             </div>
         </div>
-    </div>
+    </div> */}
 
     <section class="space sub-header">
         <div class="container container-custom">

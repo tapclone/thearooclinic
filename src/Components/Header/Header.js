@@ -1,6 +1,10 @@
 import React from 'react'
-
-function Header() {
+import AddIcon from '@mui/icons-material/Add';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import GoogleIcon from '@mui/icons-material/Google';
+import InstagramIcon from '@mui/icons-material/Instagram';
+function Header() {  
   return (
     <header>
         <div class="banner--wrap">
@@ -18,50 +22,47 @@ function Header() {
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown"
-                                                role="button" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false"> Home <i class="fas fa-plus"></i> </a>
+                                        <li class="nav-item ">
+                                            <a class="nav-link" href="/" 
+                                                role="button"  aria-haspopup="true"
+                                                aria-expanded="false"> Home <AddIcon sx={{fontSize:'small'}}></AddIcon> </a>
                                            
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1"
                                                 role="button" data-toggle="dropdown" aria-haspopup="true"
-                                                aria-expanded="false"> Department <i class="fas fa-plus"></i> </a>
-                            
+                                                aria-expanded="false"> Department <AddIcon sx={{fontSize:'small'}}></AddIcon></a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="services.html">Gynacology</a>
+                                                <a class="dropdown-item" href="services-2.html">Cardiology</a>
+                                                
+                                            </div>
                                         </li>
     
                                         <li class="nav-item ">
-                                            <a class="nav-link" href="#"
+                                            <a class="nav-link" href="/gallery"
                                                 aria-haspopup="true" aria-expanded="false">
-                                                Patients <i class="fas fa-plus"></i>
+                                                Gallery <AddIcon sx={{fontSize:'small'}}></AddIcon>
                                             </a>
                                             </li>
+                                            <li class="nav-item ">
+                                            <a class="nav-link" href="/blog" 
+                                                role="button"  aria-haspopup="true"
+                                                aria-expanded="false"> Blog <AddIcon sx={{fontSize:'small'}}></AddIcon> </a>
+                                           
+                                        </li>
                                        
                                         <li class="nav-item ">
                                             <a class="nav-link " href="/about"
                                                 role="button"  aria-haspopup="true"
-                                                aria-expanded="false"> About  <i class="fas fa-plus"></i> </a>
+                                                aria-expanded="false"> About  <AddIcon sx={{fontSize:'small'}}></AddIcon> </a>
                                             
                                         </li>
                                         <li class="nav-item ">
                                             <a class="nav-link " href="#" 
                                                 role="button"  aria-haspopup="true"
-                                                aria-expanded="false"> Contact Us <i class="fas fa-plus"></i> </a>
+                                                aria-expanded="false"> Contact Us <AddIcon sx={{fontSize:'small'}}></AddIcon> </a>
                                             
-                                        </li>
-                                        <li>
-                                            <ul class="cart-seperate">
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#"><i
-                                                            class="fas fa-search fa-top-search"></i></a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="#"><i
-                                                            class="fas fa-shopping-cart fa-top-search"></i>
-                                                        <span>2</span></a>
-                                                </li>
-                                            </ul>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link btn btn-outline-primary appointment-btn-top" href="appointment.html">Appointment</a>
@@ -113,16 +114,17 @@ function Header() {
 
                                     <ul class="main-slider-social">
                                         <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#"><FacebookIcon sx={{fontSize:'small'}}></FacebookIcon></a>
+                    
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><TwitterIcon sx={{fontSize:'small'}}></TwitterIcon></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="#"><InstagramIcon sx={{fontSize:'small'}}></InstagramIcon></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                            <a href="#"><GoogleIcon sx={{fontSize:'small'}}></GoogleIcon></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -167,16 +169,17 @@ function Header() {
 
                                     <ul class="main-slider-social">
                                         <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#"><FacebookIcon sx={{fontSize:'small'}}></FacebookIcon></a>
+                    
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><TwitterIcon sx={{fontSize:'small'}}></TwitterIcon></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="#"><InstagramIcon sx={{fontSize:'small'}}></InstagramIcon></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                            <a href="#"><TwitterIcon sx={{fontSize:'small'}}></TwitterIcon></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -221,16 +224,17 @@ function Header() {
 
                                     <ul class="main-slider-social">
                                         <li>
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#"><FacebookIcon sx={{fontSize:'small'}}></FacebookIcon></a>
+                    
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><TwitterIcon sx={{fontSize:'small'}}></TwitterIcon></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="#"><InstagramIcon sx={{fontSize:'small'}}></InstagramIcon></a>
                                         </li>
                                         <li>
-                                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                            <a href="#"><TwitterIcon sx={{fontSize:'small'}}></TwitterIcon></a>
                                         </li>
                                     </ul>
                                 </div>
