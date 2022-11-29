@@ -1,15 +1,15 @@
 import {React,useState} from 'react'
 import { Backdrop, Fade, Modal } from '@mui/material';
+import axios from 'axios'
 import {Box} from '@mui/material';
 import { useForm } from 'react-hook-form';
-import swal from "sweetalert";
 import DeleteIcon from '@mui/icons-material/Delete';
-import axios from 'axios'
-function AdminGallery() {
+import swal from "sweetalert";
+function AdminBlog() {
   const [open, setOpen] = useState(false);
-  const [widgetLoading,setWidgetLoading]=useState(true)
-  const [loading,setLoading]=useState(false)
+  const [widgetLoading,setWidgetLoading]=useState(false)
   const [image,setImage]=useState()
+  const [loading,setLoading]=useState(false)
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const style = {
@@ -29,7 +29,8 @@ function AdminGallery() {
     trigger,
     reset,
     formState: { errors },
-  } = useForm()
+  } = useForm();
+
   const Imageupload = () => {
     setWidgetLoading(true);
     var myWidget = window.cloudinary.openUploadWidget(
@@ -53,11 +54,9 @@ function AdminGallery() {
 
   };
   const onSubmit = async (item) => {
+  
     console.log(item);
     console.log(image);
-    // console.log(item, image);
-    // console.log(adminToken,"token");
-   
 
     if (image) {
       try {
@@ -83,14 +82,16 @@ function AdminGallery() {
       swal("OOPS!", "Please Upload Image!", "error");
     }
   };
+
 return (
     <div style={{marginLeft:'10%',marginTop:'3%',overflow:'scroll'}}>
-      <button className='addBtn' style={{marginLeft:'70%',marginBottom:'1%'}} onClick={handleOpen}>Add Gallery</button>
+      <button className='addBtn' style={{marginLeft:'70%',marginBottom:'1%'}} onClick={handleOpen}>Add Blog</button>
 <table class="table adminTable table-bordered" style={{textAlign:'center'}}>
   <thead>
     <tr>
       <th scope="col">Image</th>
-      <th scope="col">Name</th>
+      <th scope="col">Blog Title</th>
+      <th scope="col">Blog Description</th>
       
     </tr>
   </thead>
@@ -98,16 +99,19 @@ return (
     <tr>
       <td style={{width:'10rem',height:'10rem'}}><img src="https://dummyimage.com/16:9x1080/" alt="" style={{width:'inherit',height:'inherit'}}/></td>
       <td>Name</td>
+      <td>Description</td>
       <td><DeleteIcon></DeleteIcon></td>
     </tr>
     <tr>
     <td style={{width:'10rem',height:'10rem'}}><img src="https://dummyimage.com/16:9x1080/" alt="" style={{width:'inherit',height:'inherit'}}/></td>
       <td>Name</td>
+      <td>Description</td>
       <td><DeleteIcon></DeleteIcon></td>
     </tr>
     <tr>
     <td style={{width:'10rem',height:'10rem'}}><img src="https://dummyimage.com/16:9x1080/" alt="" style={{width:'inherit',height:'inherit'}}/></td>
       <td>Name</td>
+      <td>Description</td>
       <td><DeleteIcon></DeleteIcon></td>
     </tr>
   </tbody>
@@ -126,14 +130,14 @@ return (
           <Fade in={open} >
             <Box sx={style}>
               <div>
-                <h4 style={{ textAlign: "center" }}>ADD IMAGES</h4>
+                <h4 style={{ textAlign: "center" }}>ADD BLOGS</h4>
                 <form
                   className="tm-edit-product-form"
                   onSubmit={handleSubmit(onSubmit)}
                 >
                   <input
                     type="text"
-                    placeholder="Enter Image Name"
+                    placeholder="Enter Blog Title"
                     className="form-control mt-3"
                     {...register("Name", {
                       required: "Name is Required",
@@ -146,6 +150,24 @@ return (
                     <div>
                       <small className="text-danger">
                         {errors.Name.message}
+                      </small>
+                    </div>
+                  )}
+                  <textarea
+                    rows="5"
+                    placeholder="Enter Blog"
+                    className="form-control  mt-3"
+                    {...register("Description", {
+                      required: "Description is Required",
+                    })}
+                    onKeyUp={() => {
+                      trigger("Description");
+                    }}
+                  />
+                  {errors.Description && (
+                    <div>
+                      <small className="text-danger">
+                        {errors.Description.message}
                       </small>
                     </div>
                   )}
@@ -172,4 +194,4 @@ return (
   )
 }
 
-export default AdminGallery
+export default AdminBlog

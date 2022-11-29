@@ -92,13 +92,6 @@
         color: rgba(255, 255, 255, 0.7);
     }
     
-    .s-sidebar__nav:hover,
-    .s-sidebar__nav:focus,
-    .s-sidebar__trigger:focus+.s-sidebar__nav,
-    .s-sidebar__trigger:hover+.s-sidebar__nav {
-        left: 0;
-    }
-    
     .s-sidebar__nav ul {
         position: absolute;
         top: 4em;
@@ -113,8 +106,7 @@
     }
     
     .s-sidebar__nav-link {
-        position:
-            relative;
+        position: relative;
         display: inline-block;
         width: 100%;
         height: 4em;
@@ -150,47 +142,64 @@
     }
     
     /* Mobile First */
-    @media (min-width: 42em) {
-        .s-layout__content {
-            margin-left: 4em;
-        }
-    
-        /* Sidebar */
-        .s-sidebar__trigger {
-            width: 4em;
-        }
-    
-        .s-sidebar__nav {
-            width: 4em;
-            left: 0;
-        }
-    
-        .s-sidebar__nav:hover,
-        .s-sidebar__nav:focus,
-        .s-sidebar__trigger:hover+.s-sidebar__nav,
-        .s-sidebar__trigger:focus+.s-sidebar__nav {
-            width: 15em;
-        }
+    .s-layout__content {
+        margin-left: 4em;
     }
+
+    /* Sidebar */
+    .s-sidebar__trigger {
+        width: 4em;
+    }
+
+    .s-sidebar__nav {
+        width: 4em;
+        left: 0;
+    }
+    .navBarResponsive{
+        width: 15em;
+       
+    } 
     
-    @media (min-width: 68em) {
-        .s-layout__content {
-            margin-left: 15em;
-        }
+    .s-layout__content {
+        margin-left: 15em;
+    }
+
+    /* Sidebar */
     
-        /* Sidebar */
-        .s-sidebar__trigger {
-            display: none
-        }
-    
-        .s-sidebar__nav {
-            width: 15em;
-        }
-    
-        .s-sidebar__nav ul {
-            top: 1.3em;
-        }
+
+    .s-sidebar__nav {
+        width: 15em;
+    }
+
+    .s-sidebar__nav ul {
+        top: 1.3em;
     }
     .navIcon{
         transform: translate(36%,81%);
     }
+        .navBarResponsive{
+            width: 15em;
+        }
+        .notResp{
+            width:4em
+        }
+.addBtn{
+    padding: 7px;
+    background-color: rgb(63, 63, 202);
+    color: white;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.uploadImg{
+    
+    align-items: center;
+    padding-top: 10px;
+    border-radius: 16px;
+}
+.adminTable td,th{
+    vertical-align: middle;
+    text-align: center;
+
+}
