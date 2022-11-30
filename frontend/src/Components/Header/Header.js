@@ -1,10 +1,12 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 import AddIcon from '@mui/icons-material/Add';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GoogleIcon from '@mui/icons-material/Google';
 import InstagramIcon from '@mui/icons-material/Instagram';
 function Header() {  
+    const navigate=useNavigate()
   return (
     <header>
         <div class="banner--wrap">
@@ -23,13 +25,13 @@ function Header() {
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto">
                                         <li class="nav-item ">
-                                            <a class="nav-link" href="/" 
+                                            <a class="nav-link" onClick={()=>navigate('/')}
                                                 role="button"  aria-haspopup="true"
                                                 aria-expanded="false"> Home <AddIcon sx={{fontSize:'small'}}></AddIcon> </a>
                                            
                                         </li>
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1"
+                                            <a class="nav-link dropdown-toggle"  id="navbarDropdown1" onClick={()=>navigate('/')}
                                                 role="button" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false"> Department <AddIcon sx={{fontSize:'small'}}></AddIcon></a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,26 +42,26 @@ function Header() {
                                         </li>
     
                                         <li class="nav-item ">
-                                            <a class="nav-link" href="/gallery"
+                                            <a class="nav-link" onClick={()=>navigate('/gallery')}
                                                 aria-haspopup="true" aria-expanded="false">
                                                 Gallery <AddIcon sx={{fontSize:'small'}}></AddIcon>
                                             </a>
                                             </li>
                                             <li class="nav-item ">
-                                            <a class="nav-link" href="/blog" 
+                                            <a class="nav-link" onClick={()=>navigate('/blog')}
                                                 role="button"  aria-haspopup="true"
                                                 aria-expanded="false"> Blog <AddIcon sx={{fontSize:'small'}}></AddIcon> </a>
                                            
                                         </li>
                                        
                                         <li class="nav-item ">
-                                            <a class="nav-link " href="/about"
+                                            <a class="nav-link " onClick={()=>navigate('/about')}
                                                 role="button"  aria-haspopup="true"
                                                 aria-expanded="false"> About  <AddIcon sx={{fontSize:'small'}}></AddIcon> </a>
                                             
                                         </li>
                                         <li class="nav-item ">
-                                            <a class="nav-link " href="#" 
+                                            <a class="nav-link " onClick={()=>navigate('/')}
                                                 role="button"  aria-haspopup="true"
                                                 aria-expanded="false"> Contact Us <AddIcon sx={{fontSize:'small'}}></AddIcon> </a>
                                             

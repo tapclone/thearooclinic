@@ -1,9 +1,19 @@
-import React from 'react'
+import {React,useEffect,useState} from 'react'
+import axios from 'axios'
 import Footer from '../Footer/Footer'
 import SubHeader from '../Header/SubHeader'
 import GalleryCard from './GalleryCard'
 import './Gallery.css'
 function Gallery() {
+    const [gallery,setGallery]=useState([])
+    useEffect(()=>{
+        axios.get('/api/admin/viewAllGallery').then(res=>{
+          
+            setGallery(res.data)
+           }).catch(err=>{
+            console.log(err);
+           })
+    },[])
   return (
     <div>
         <SubHeader></SubHeader>
@@ -35,15 +45,12 @@ function Gallery() {
                     </div>
                 </div>
             </div>
-            <div className='galleryDisplay' >
-               <GalleryCard></GalleryCard>
-               <GalleryCard></GalleryCard>
-                <GalleryCard></GalleryCard>
-                <GalleryCard></GalleryCard>
-                <GalleryCard></GalleryCard>
-                <GalleryCard></GalleryCard>
-                <GalleryCard></GalleryCard>
-                <GalleryCard></GalleryCard>
+            <div className='container' >
+                <div className='row'>
+             {gallery.map((item)=>{
+                return <GalleryCard item={item}></GalleryCard>
+             })}
+             </div>
             </div>
             
         </div>

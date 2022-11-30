@@ -1,9 +1,17 @@
-import React from 'react'
+import {React,useContext} from 'react'
+import {useNavigate} from 'react-router-dom'
+import {userContext} from '../Context/Context'
+function BlogCard({item,splitDesc}) {
+  const navigate=useNavigate()
+  const {singleBlog,setSingleBlog}=useContext(userContext)
 
-function BlogCard({item}) {
-  console.log(item.Name);
+
+  function handleSingleBlog(item){
+    setSingleBlog(item)
+    navigate('/blogSingle')
+  }
   return (
-    
+
     <div class="blog-list col-md-6 " >
       <div style={{width:'100%',height:'50%'}}><img src={item.image} class="img-fluid" alt="#" style={{width:'100%',height:'100%'}}/></div>
     
@@ -14,8 +22,8 @@ function BlogCard({item}) {
     <div class="blog-text-wrap">
         
         <h3>{item.Name}</h3>
-        <p>{item.Description}</p>
-        <a href="/blogSingle" class="btn btn-primary">Read More</a>
+        <p>{splitDesc}.......</p>
+        <a  class="btn btn-primary"  onClick={()=>handleSingleBlog(item)}>Read More</a>
     </div>
 </div>
   )

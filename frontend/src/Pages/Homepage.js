@@ -1,9 +1,9 @@
-import React from 'react'
+import {React} from 'react'
 import Footer from '../Components/Footer/Footer'
 import Header from '../Components/Header/Header'
 import Home from '../Components/Home/Home'
 
-function Homepage() {
+function Homepage(props) {
   return (
     <div>
         <Header></Header>

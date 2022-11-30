@@ -1,8 +1,9 @@
-import React from 'react'
+import {React} from 'react'
 import About from '../Components/About/About'
 import Footer from '../Components/Footer/Footer'
 
-function AboutPage() {
+function AboutPage(props) {
+
   return (
     <div>
         <About></About>

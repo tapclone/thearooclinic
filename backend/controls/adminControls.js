@@ -4,6 +4,7 @@ const collection = require("../config/collection");
 const generateToken = require("../utils/jwtToken");
 const { ObjectId } = require("mongodb");
 const { GALLERY_COLLECTION } = require("../config/collection");
+const {DOCTORS_COLLECTION} =require('../config/collection')
 
 const Login = asyncHandler(async (req, res) => {
   console.log(req.body);
@@ -99,7 +100,7 @@ const AddDoctors = asyncHandler((req, res) => {
   }
 })
 const ViewAllDoctors = asyncHandler(async (req, res) => {
-  const AllDoctors = await db.get().collection(GALLERY_COLLECTION).find().toArray()
+  const AllDoctors = await db.get().collection(DOCTORS_COLLECTION).find().toArray()
   if (AllDoctors) {
     res.status(200).json(AllDoctors)
   } else {
@@ -108,7 +109,7 @@ const ViewAllDoctors = asyncHandler(async (req, res) => {
 })
 const DeleteDoctors=asyncHandler(async(req,res)=>{
   const id=req.params.id
-  const deleteDoctors=await db.get().collection(GALLERY_COLLECTION).deleteOne({_id:ObjectId(id)})
+  const deleteDoctors=await db.get().collection(DOCTORS_COLLECTION).deleteOne({_id:ObjectId(id)})
  if(deleteDoctors){
   res.status(200).json(deleteDoctors)
  }else{

@@ -1,11 +1,15 @@
 import axios from 'axios'
 import {React,useState,useEffect} from 'react'
-import Footer from '../Footer/Footer'
-import Header from '../Header/Header'
 import BlogCard from './BlogCard'
 
 function Blog() {
     const [blogs,setBlogs]=useState([])
+
+    useEffect(()=>{
+        document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      },[blogs])
+
     useEffect(()=>{
         axios.get('/api/admin/viewAllBlog').then(res=>{
           
@@ -40,7 +44,9 @@ function Blog() {
             <div class="row  " style={{padding:'0 5%'}}>
 
             {blogs.map((item)=>{
-               return <BlogCard item={item} ></BlogCard>
+                const splitDesc=item.Description.slice(0,100)
+                
+               return <BlogCard item={item} splitDesc={splitDesc} ></BlogCard>
             })}
                     
         

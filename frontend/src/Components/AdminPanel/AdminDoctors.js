@@ -64,7 +64,7 @@ function AdminDoctor() {
           },
         };
         const { data } = await axios.post(
-          "/api/admin/addGallery",
+          "/api/admin/addDoctors",
           { Name,Description,image },
           config
         );

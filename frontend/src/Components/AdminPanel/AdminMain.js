@@ -45,7 +45,7 @@ function AdminMain() {
           >
             <div>
               <li>
-                <a class="s-sidebar__nav-link" href="/admin">
+                <a class="s-sidebar__nav-link" href="/adminHome">
                   <CollectionsIcon className='navIcon'></CollectionsIcon>
                   <em>Gallery</em>
                 </a>

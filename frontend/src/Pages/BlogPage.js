@@ -1,4 +1,4 @@
-import React from 'react'
+import {React} from 'react'
 import Blog from '../Components/Blog/Blog'
 import Footer from '../Components/Footer/Footer'
 import SubHeader from '../Components/Header/SubHeader'
