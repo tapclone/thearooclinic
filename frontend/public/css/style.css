@@ -1856,7 +1856,9 @@ a:focus {
   color: #4d72d0;
   font-weight: 500;
 }
-
+.doctors-slider{
+  display: flex;
+}
 .doctors-slider .slick-slide {
   margin: 0 12px;
 }
@@ -1900,7 +1902,7 @@ a:focus {
 }
 .team-img_block img {
   margin: 0 auto 16px auto;
-  width: 100%;
+  /* width: 100%; */
 }
 .team-img_block h4,
 .team-img_block p {
@@ -3268,7 +3270,6 @@ BLOG GRID 2
 .blog-grid-top_icon p {
   font-size: 11px;
   display: inline-block;
-  float: right;
   margin: 4px 0 0;
   opacity: 0.6;
 }
@@ -3697,7 +3698,7 @@ PRICING
 }
 .testi-slider-style2 .slick-next:before {
   content: url(../images/arrow-right.png);
-  ont-size: 32px;
+  font-size: 32px;
   color: #9e9a9a;
   font-family: none;
 }
@@ -3707,7 +3708,7 @@ PRICING
 }
 .testi-slider-style2 .slick-prev:before {
   content: url(../images/arrow-left.png);
-  ont-size: 32px;
+  font-size: 32px;
   color: #9e9a9a;
   font-family: none;
 }
@@ -3820,7 +3821,7 @@ SERVICES DETAIL
 }
 .service-detail-icon h2 {
   display: inline-block;
-  float: right;
+
   opacity: 0.1;
   font-weight: 400;
   font-size: 60px;

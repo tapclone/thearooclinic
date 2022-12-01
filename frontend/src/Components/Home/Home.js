@@ -1,17 +1,7 @@
-import { React, useEffect, useState } from 'react'
-import DoctorsCard from './DoctorsCard'
-import axios from 'axios'
+import { React } from 'react'
+import DoctorsSlider from './DoctorsSlider'
 
 function Home() {
-    const [doctors, setDoctors] = useState([])
-    useEffect(() => {
-        axios.get('/api/admin/viewAllDoctors').then(res => {
-
-            setDoctors(res.data)
-        }).catch(err => {
-            console.log(err);
-        })
-    }, [])
     return (
         <div>
             <section class="about-section">
@@ -338,38 +328,26 @@ function Home() {
                 </div>
             </section>
 
-            <section class="our-team">
-                <div class="container container-custom">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="sub-title_center">
-                                <span>---- Our Team ----</span>
-                                <h2>Our Dedicated Doctors</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="doctors-slider">
-                                
-                                  {doctors.map(()=>{
-                                    return <div className="team-img_block yellow">
-                                    <div className="team-img-socila-block">
-                                        <img src="images/team1.jpg" className="img-fluid" alt="#" />
-                                    </div>
-                                    <h4>Dr. Mary Joe</h4>
-                                    <p>Cardiologist Specialist</p>
-                                </div>
-                                  })}
-                                     
-
-                                    
-
-                            </div>
-                        </div>
+            
+                    
+        <section class="our-team">
+        <div class="container container-custom">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="sub-title_center">
+                        <span>---- Our Team ----</span>
+                        <h2>Our Dedicated Doctors</h2>
                     </div>
                 </div>
-            </section>
+            </div>
+            <div>
+                <DoctorsSlider></DoctorsSlider>
+            </div>
+            
+        </div>
+    </section>
+                    
+                
 
             <section class="bg-img3">
                 <div class="container container-custom">

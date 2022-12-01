@@ -1,0 +1,69 @@
+.brandList{
+    overflow: scroll;
+   
+    margin: -2rem 0;
+}
+.brandList::-webkit-scrollbar{
+    display: none;
+}
+
+.brandList ul{
+    margin-top: 4rem;
+    list-style: none;
+    display: flex;
+}
+.brandList li {
+    margin-right: 4rem;
+}
+
+
+.doctorCard{
+    width: 15rem;
+    height: 22rem;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.doctorImage{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12%;
+    
+}
+.doctorImage img{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 9%;
+}
+@media (max-width:900px) {
+    .doctorCard{
+        width: 12rem;
+        height: 18rem;
+    }
+    .brandList li {
+        margin-right: 3rem;
+    }
+    .brandList ul{
+        margin-left: -1rem;
+    }
+}
+@media (max-width:650px) {
+    .doctorCard{
+        width: 9rem;
+        height: 15rem;
+        padding-bottom: 2rem;
+    }
+    .brandList li {
+        margin-right: 1rem;
+    }
+    .brandList ul{
+        margin-left: -2rem;
+    }
+}
+.doctorCard:hover{
+    border: 10px solid rgb(221, 215, 184);
+}
